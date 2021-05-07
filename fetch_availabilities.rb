@@ -14,16 +14,18 @@ In the URL query, `start` and `wid` always have the same values.
 The only thing that changes is the `sel_day` value. 
 
 The value of `2459345` for sal_day fetches the schedule for the week commencing May 10th 2021. 
-To request for the next week (Nat 17th), increment the value by 7:
+To request for the next week (May 17th), increment the value by 7:
 
 `curl -X POST https://uk.bookingbug.com/book/top_item_choose?sel_day=2459352&amp;start=2459342&amp;wid=4392254`
 
 Below is a Ruby implementation that increments the `sal_day` value according
 to user input and fetches the HTML content with availabilities.
 
-Usage example: Fetch availabilities for the week commencing 16th May 2021:
+Usage example: Fetch availabilities for the week commencing 17th May 2021:
 
-`ruby fetch_availabilities.rb 2021-05-16`
+`ruby fetch_availabilities.rb 2021-05-17`
+
+I think it only works for the current week and the following two weeks.
 
 =end
 
